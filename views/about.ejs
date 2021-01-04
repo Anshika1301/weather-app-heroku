@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("partials/headerLink") -%>
+</head>
+<body>
+    <!------------ nav bar link --------->
+    <%- include("partials/nav") -%>
+
+    <!------------ main header -------------->
+    <div class="container-fluid" id="about">
+        <div class="row">
+            <div class="col-md-10 mx-auto">
+                <div class="row">
+                    <!--------- main left header ------->
+                    <div class="col-md-6 mainh_right align-items-center">
+                        <figure>
+                            <img src="img/woman.png" alt="profile photo" class="img-fluid">
+                        </figure>
+                    </div>
+
+                    <!---------- main right header --------->
+                    <div class="col-md-6 mainh_left">
+                        <p class="about-p">Welcome to the weather app</p>
+                        <h2 class="about-h text-justify">i am a <span class="title-color">full stack developer</span>, I'm a Student. I ❤️ Tea, Chinese Food and Sweets. 
+                        I started learning to code when I was 15 years old because I wanted to make my own designs. Over time, I have gained a wealth 
+                         of experience designing and developing web applications.</h2>
+                        <button class="home-btn mb-5">About me</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------- footer ------------------>
+    <%- include("partials/footer") -%>
+</body>
+</html>

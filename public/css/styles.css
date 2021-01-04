@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Piazzolla', serif;
+}
+
+:root{
+    --main-bg: #1e272e;
+    --main-color: #0097e6;
+}
+
+html{
+    /* that is font-size => 1rem = 10px */
+    font-size: 62.5%; 
+}
+
+body{
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    /* margin:0; */
+}
+
+.main_menu{
+    background-color: var(--main-bg);
+}
+
+.navbar{
+    background-color: var(--main-bg);
+    padding: 2rem 0;
+    /* color: white; */
+}
+.navbar a{
+    color:white;
+    font-size: 1.8rem;
+}
+.navbar li a{
+    font-size: 1.5rem;
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+
+.fa-snowflake{
+    color: var(--main-color);
+    transition: all linear;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.navbar .navbar-toggler{
+    background-color: grey;
+}
+
+.navbar li{
+    margin-left: 2rem;
+}
+
+/********** main-header **************/
+
+.mainh_left, .mainh_right{
+    height: 55rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.mainh_right{
+    height: 48rem;
+}
+
+.mainh_left p{
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.mainh_left h1{
+    font-size: 3.3rem;
+    margin:1rem 0 3rem;
+    text-transform: capitalize;
+}
+
+.mainh_left span.title-color{
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+button.home-btn, button.go-backbtn{
+    border: none;
+    outline: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px #000;
+}
+
+button.home-btn:hover, button.go-backbtn:hover{
+    box-shadow: 0 8px 6px -6px var(--main-color);
+}
+
+.mainh_right .carousel.slide{
+    margin: auto;
+}
+
+.mainh_right figure img{
+    height: 30rem;
+    filter: drop-shadow(0 0.5rem 1rem rgba(0,0,0,0.3));
+    margin: 6rem 0 0;
+}
+
+/***************** weather page style *****************/
+.temp_form{
+    width: 60%;
+    position: relative;
+    margin: 7rem auto 6rem;
+}
+.temp_form input[type="text"]{
+    width: 100%;
+    padding: 2rem 5rem 2rem 2rem;
+    background: #1e202b;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 1.7rem;
+    border-radius: 3rem;
+}
+
+::placeholder{
+    color: #bfc1c8;
+}
+.temp_form input[type="submit"]{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: none;
+    outline: none;
+    background: #009ad8;
+    padding: 0 3rem;
+    border-radius: 3rem;
+    color: white;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    transition: background 0.4s;
+}
+.temp_form input[type="submit"]:hover{
+    color: #009ad8;
+    background: white;
+}
+
+
+.tempinfo{
+    width: 44rem;
+    margin: auto;
+    min-height: 20rem;
+    background-color: #323544;
+    border-radius: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+.top_layer{
+    width: 100%;
+    height: 20%;
+    background-color: #2d303d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.top_layer p{
+    color: white;
+    font-weight: 300;
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+.main_layer{
+    width: 100%;
+    color:white;
+    height: 80%;
+    padding: 2rem;
+}
+.main_layer #city_name{
+    color: #bfc1c8;
+    font-weight: 300;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+.main_layer .middle_layer{
+    display: flex;
+    justify-content:space-around;
+}
+.main_layer .middle_layer p,
+.main_layer .middle_layer .fa{
+    font-size: 7rem;
+    font-weight: 900;
+}
+
+.fa{
+    color: #009ad8;
+}
+.data-hide{
+    visibility: hidden;
+    transition: all 0.5s linear;
+}
+
+
+/***************** about page style *****************/
+#about p.about-p{
+    font-size: 1.6rem;
+    text-transform: capitalize;
+}
+#about h2.about-h{
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    margin:0rem 0 2rem;
+}
+/***************** error page style *****************/
+.main_header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem auto;
+}
+
+.main_header h2 {
+    margin-bottom: 2rem;
+}
+
+figure img.err-img{
+    height: auto;
+    width:50%;
+    display: block;
+    margin: auto;
+}
+
+/************************ footer style *********************/
+footer{
+    width : 100%;
+    line-height: 6rem;
+    background-color: var(--main-bg);
+    color: white;
+    margin-top: auto;
+}
+
+footer p{
+    margin:0;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.3rem;
+}
+
+/***************** media query ******************/
+
+@media(max-width: 767px)
+{
+    .navbar li{
+        margin-top: 2rem;
+    }
+    .mainh_left{
+        height: auto;
+        margin: 6rem 0 1rem;
+        align-items: center;
+    }
+    .mainh_left h1{
+        font-size: 2.8rem;
+        margin: 0rem 0 2rem;
+    }
+    button.home-btn{
+        padding: 0.8rem 6rem;
+    }
+    .mainh_right{
+        height: auto;
+    }
+    .main_content{
+        width: auto;
+    }
+    .tempinfo {
+        width: auto;
+    }
+}
+@media(max-width: 540px){
+    .mainh_left h1{
+        font-size: 2rem;
+    }
+    .mainh_left p {
+        font-size: 1.5rem;
+    }
+    button.home-btn {
+        padding: 0.8rem 2rem;
+    }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("partials/headerLink") -%>
+</head>
+<body>
+    <!------------ nav bar link --------->
+    <%- include("partials/nav") -%>
+
+    <!------------ main header -------------->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10 mx-auto main_header">
+                
+                    <!--------- main left header ------->
+                    
+                        <figure>
+                            <img src="img/error3.png" alt="profile photo" class="img-fluid err-img">
+                        </figure>
+                            
+                        <h2><%= errmsg %></h2>
+                        <a href="/"><button class="go-backbtn">go back</button></a>  
+                
+            </div>
+        </div>
+    </div>
+
+    <!-------------- footer ------------------>
+    <%- include("partials/footer") -%>
+</body>
+</html>
